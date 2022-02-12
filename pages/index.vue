@@ -10,7 +10,7 @@
           class="item flex"
           v-for="product in products"
           :key="product.id"
-          @click="moveToDetailPage(product.price)"
+          @click="moveToDetailPage(product.id)"
         >
           <img
             class="product-image"
@@ -43,8 +43,8 @@ export default {
   },
 
   methods: {
-    moveToDetailPage(price) {
-      this.$router.push(`detail/${price}`)
+    moveToDetailPage(id) {
+      this.$router.push(`detail/${id}`)
     },
   },
 }
